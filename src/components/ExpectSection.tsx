@@ -1,4 +1,3 @@
-// src/components/ExpectSection.tsx
 import { motion } from "framer-motion";
 import { ClipboardList, Activity, HeartPulse, CheckCircle } from "lucide-react";
 
@@ -51,7 +50,6 @@ const ExpectSection = () => {
           </p>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
@@ -72,7 +70,7 @@ const ExpectSection = () => {
                   <div className={`${isEven ? "" : "md:order-2"}`}>
                     <div className={`${isEven ? "md:text-right md:pr-16" : "md:pl-16"}`}>
                       <span className="font-serif text-5xl text-accent/20">{step.num}</span>
-                      {/* FIXED: Using template literals `` instead of standard quotes "" */}
+                      
                       <div className={`flex items-center gap-3 mt-2 mb-3 ${isEven ? 'md:justify-end' : ''}`}>
                         <div className="w-10 h-10 rounded-xl bg-sage-light flex items-center justify-center">
                           <step.icon className="w-5 h-5 text-accent" />
