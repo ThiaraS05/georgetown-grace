@@ -1,3 +1,4 @@
+// src/components/TestimonialsSection.tsx
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
@@ -36,7 +37,6 @@ const TestimonialsSection = () => {
     <section className="py-20 md:py-28 bg-white text-foreground relative overflow-hidden">
       <div className="section-padding max-w-[1400px] mx-auto relative z-10">
         
-        {/* Google Reviews Header */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center"
           initial={{ opacity: 0, y: 30 }}
@@ -62,7 +62,6 @@ const TestimonialsSection = () => {
           <span className="text-sm text-muted-foreground">Based on 23 reviews</span>
         </motion.div>
 
-        {/* Review Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((t, i) => (
             <motion.div
@@ -89,8 +88,9 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               
+              {/* FIXED: Unescaped quotes replaced with &quot; */}
               <p className="text-gray-700 leading-relaxed text-sm flex-1">
-                "{t.text}"
+                &quot;{t.text}&quot;
               </p>
               
               <div className="mt-6 pt-4 border-t border-gray-50 flex items-center gap-2">
