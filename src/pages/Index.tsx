@@ -11,6 +11,7 @@ import EmergencyBanner from "@/components/EmergencyBanner";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCallButton from "@/components/FloatingCallButton";
+import ChatbotWidget from "@/components/ChatbotWidget"; // <-- IMPORT HERE
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
       </main>
       <Footer />
       <FloatingCallButton />
+      <ChatbotWidget /> {/* <-- ADD COMPONENT HERE */}
     </>
   );
 };
