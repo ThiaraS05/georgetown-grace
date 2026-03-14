@@ -19,7 +19,6 @@ const DoctorsSection = () => {
         </motion.div>
 
         <div className="space-y-24">
-          {/* Dr. Karam Ashoo */}
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <motion.div
               className="lg:col-span-5"
@@ -78,7 +77,6 @@ const DoctorsSection = () => {
             </motion.div>
           </div>
 
-          {/* Dr. Michael Tiedemann */}
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <motion.div
               className="lg:col-span-7 lg:pt-8 order-2 lg:order-1"
@@ -124,7 +122,6 @@ const DoctorsSection = () => {
             >
               <div className="relative">
                 <div className="rounded-3xl overflow-hidden shadow-xl">
-                  {/* You can replace this image src with the second doctor's portrait once uploaded */}
                   <div className="w-full h-[500px] md:h-[600px] bg-gray-200 flex items-center justify-center text-gray-400 text-lg">
                     [Dr. Tiedemann Portrait Placeholder]
                   </div>
