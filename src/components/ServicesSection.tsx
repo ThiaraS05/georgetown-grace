@@ -6,7 +6,6 @@ const ServicesSection = () => {
     <section id="services" className="py-24 md:py-32 bg-cream">
       <div className="section-padding max-w-[1400px] mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Content */}
           <motion.div
             className="lg:col-span-7 order-2 lg:order-1"
             initial={{ opacity: 0, y: 30 }}
@@ -34,7 +33,6 @@ const ServicesSection = () => {
               </p>
             </div>
 
-            {/* Key Symptoms / Points */}
             <div className="grid sm:grid-cols-2 gap-4 mt-10">
               {[
                 { title: "Sensitivity", desc: "Prolonged sensitivity to heat and cold." },
@@ -50,7 +48,6 @@ const ServicesSection = () => {
             </div>
           </motion.div>
 
-          {/* Image */}
           <motion.div
             className="lg:col-span-5 order-1 lg:order-2"
             initial={{ opacity: 0, x: 40 }}
