@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
-import { Search, ClipboardList, Sparkles, HeartPulse } from "lucide-react";
+import { Coffee, ShieldPlus, HeartPulse, Stethoscope } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
+    icon: Coffee,
     num: "01",
-    title: "Consultation & Diagnosis",
-    desc: "We'll take the time to understand your symptoms, review your dental history, and use advanced imaging to determine the best course of action.",
+    title: "Preparation & Medications",
+    desc: "Please eat a full breakfast or lunch prior to your procedure. Taking 400mg of Ibuprofen 1 hour before can help reduce inflammation. Continue all regular medications unless advised otherwise.",
   },
   {
-    icon: ClipboardList,
+    icon: ShieldPlus,
     num: "02",
-    title: "Treatment Planning",
-    desc: "Your personalized treatment plan is explained clearly — no jargon, no surprises. We answer every question before we begin.",
-  },
-  {
-    icon: Sparkles,
-    num: "03",
-    title: "Your Procedure",
-    desc: "With gentle hands and modern techniques, the procedure is typically completed in one visit. Most patients are surprised by how comfortable it is.",
+    title: "The Procedure",
+    desc: "Root canals are performed using local anesthesia. Because you'll be comfortable and awake, there are typically no restrictions after the procedure concerning driving or returning to work.",
   },
   {
     icon: HeartPulse,
+    num: "03",
+    title: "Immediately After",
+    desc: "While anaesthetized ('frozen'), avoid drinking hot liquids or chewing to prevent biting yourself. You may experience some discomfort or mild swelling for 1-2 weeks as your tooth heals.",
+  },
+  {
+    icon: Stethoscope,
     num: "04",
-    title: "Recovery & Aftercare",
-    desc: "We'll provide clear aftercare instructions and follow up to ensure you're healing well. You'll be back to normal in no time.",
+    title: "Post-Operative Care",
+    desc: "A temporary restoration will be placed in your tooth. You must return to your regular dentist to have a permanent filling or crown placed. Avoid heavy chewing on the tooth until then.",
   },
 ];
 
@@ -43,11 +43,10 @@ const ExpectSection = () => {
             What to Expect
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight text-foreground leading-tight">
-            A clear path to <span className="italic">feeling better.</span>
+            Clear guidelines for a <span className="italic">smooth recovery.</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-6">
-            We know visiting a specialist can feel overwhelming. Here's exactly what your
-            experience looks like — no surprises, just care.
+            We want you to feel fully prepared for your appointment. Here is what your treatment and recovery timeline will look like.
           </p>
         </motion.div>
 
@@ -73,13 +72,13 @@ const ExpectSection = () => {
                   <div className={`${isEven ? "" : "md:order-2"}`}>
                     <div className={`${isEven ? "md:text-right md:pr-16" : "md:pl-16"}`}>
                       <span className="font-serif text-5xl text-accent/20">{step.num}</span>
-                      <div className="flex items-center gap-3 mt-2 mb-3 ${isEven ? 'md:justify-end' : ''}">
+                      <div className={`flex items-center gap-3 mt-2 mb-3 ${isEven ? 'md:justify-end' : ''}`}>
                         <div className="w-10 h-10 rounded-xl bg-sage-light flex items-center justify-center">
                           <step.icon className="w-5 h-5 text-accent" />
                         </div>
                         <h3 className="font-serif text-2xl text-foreground">{step.title}</h3>
                       </div>
-                      <p className="text-muted-foreground leading-relaxed max-w-md">
+                      <p className="text-muted-foreground leading-relaxed max-w-md ml-auto mr-0">
                         {step.desc}
                       </p>
                     </div>
