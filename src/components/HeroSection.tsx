@@ -1,14 +1,61 @@
+Here are the updated files to reduce the blank space in the hero section, move the "Meet the Doctors" section right after it, and restyle the testimonials to look like imported Google reviews.
+
+1. src/pages/Index.tsx
+This update reorders the components so DoctorsSection appears immediately after HeroSection.
+
+TypeScript
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import WhyChooseSection from "@/components/WhyChooseSection";
+import DoctorsSection from "@/components/DoctorsSection";
+import ServicesSection from "@/components/ServicesSection";
+import ExpectSection from "@/components/ExpectSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
+import ReferringSection from "@/components/ReferringSection";
+import EmergencyBanner from "@/components/EmergencyBanner";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import FloatingCallButton from "@/components/FloatingCallButton";
+
+const Index = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <DoctorsSection />
+        <WhyChooseSection />
+        <ServicesSection />
+        <ExpectSection />
+        <TestimonialsSection />
+        <EmergencyBanner />
+        <FAQSection />
+        <ReferringSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <FloatingCallButton />
+    </>
+  );
+};
+
+export default Index;
+2. src/components/HeroSection.tsx
+This update removes the min-h-screen property and reduces the vertical padding to remove excess blank space on the landing page.
+
+TypeScript
 import { motion } from "framer-motion";
 import { Phone, CalendarDays, Star } from "lucide-react";
 import heroImage from "@/assets/hero-office.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative flex items-center overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20">
       {/* Subtle background texture */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-cream" />
 
-      <div className="relative z-10 w-full section-padding max-w-[1400px] mx-auto pt-28 pb-20 lg:pt-32 lg:pb-28">
+      <div className="relative z-10 w-full section-padding max-w-[1400px] mx-auto">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Copy side */}
           <motion.div
@@ -71,7 +118,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               {/* Main image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-foreground/5">
                 <img
