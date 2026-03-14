@@ -1,7 +1,7 @@
-Here are the updated files to reduce the blank space in the hero section, move the "Meet the Doctors" section right after it, and restyle the testimonials to look like imported Google reviews.
+//Here are the updated files to reduce the blank space in the hero section, move the "Meet the Doctors" section right after it, and restyle the testimonials to look like imported Google reviews.
 
 1. src/pages/Index.tsx
-This update reorders the components so DoctorsSection appears immediately after HeroSection.
+//This update reorders the components so DoctorsSection appears immediately after HeroSection.
 
 TypeScript
 import Navbar from "@/components/Navbar";
