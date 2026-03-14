@@ -18,35 +18,29 @@ const ServicesSection = () => {
               Root Canal Therapy
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight text-foreground leading-tight mb-8">
-              Saving your natural tooth,{" "}
-              <span className="italic">relieving your pain.</span>
+              Understanding the procedure,{" "}
+              <span className="italic">eliminating the fear.</span>
             </h2>
 
-            <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+            <div className="space-y-5 text-muted-foreground text-base md:text-lg leading-relaxed">
               <p>
-                A root canal isn't something to fear — it's a solution. When the soft tissue
-                inside your tooth becomes infected or inflamed, root canal therapy removes the
-                source of pain and preserves the tooth you might otherwise lose.
+                Endodontics, or root canal therapy, is often the most feared and misunderstood of all dental procedures. In order to understand treatment, it helps to understand the anatomy of a tooth. 
               </p>
               <p>
-                You may need a root canal if you're experiencing persistent tooth pain, sensitivity
-                to hot or cold, swelling, or tenderness. These symptoms often mean the nerve inside
-                your tooth needs attention.
+                Your tooth consists of the crown (the part you can see) and the root (beneath the gum, surrounded by bone). Inside each root is a canal containing pulp—nerves, blood vessels, and soft tissue. 
               </p>
               <p>
-                At Georgetown Endodontics, we use advanced techniques and modern technology to
-                make treatment as comfortable and efficient as possible. Most patients tell us
-                it felt easier than they expected.
+                Root canal treatment is necessary when the pulp becomes inflamed or infected due to decay, deep restorations, fractures, or trauma. If left untreated, it can cause pain or lead to an abscess. To preserve the tooth, we completely or partially remove the diseased pulpal tissue.
               </p>
             </div>
 
-            {/* Key points */}
+            {/* Key Symptoms / Points */}
             <div className="grid sm:grid-cols-2 gap-4 mt-10">
               {[
-                { title: "Pain Relief", desc: "We eliminate the source of discomfort" },
-                { title: "Save Your Tooth", desc: "Preserve your natural smile" },
-                { title: "Modern Techniques", desc: "Advanced technology for precision" },
-                { title: "Comfortable Care", desc: "Gentle approach from start to finish" },
+                { title: "Sensitivity", desc: "Prolonged sensitivity to heat and cold." },
+                { title: "Swelling & Pain", desc: "Swelling, pain, or tenderness of the tooth, gums, or jaw." },
+                { title: "Hidden Symptoms", desc: "Sometimes there are no symptoms, but signs appear on an X-ray." },
+                { title: "Re-treatment & Surgery", desc: "We also handle re-treatment and root end surgeries (apicoectomy)." },
               ].map((p) => (
                 <div key={p.title} className="bg-background rounded-xl p-5 border border-border/50">
                   <h4 className="font-serif text-lg text-foreground mb-1">{p.title}</h4>
