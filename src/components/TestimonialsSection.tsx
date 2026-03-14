@@ -1,4 +1,3 @@
-// src/components/TestimonialsSection.tsx
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
@@ -88,7 +87,6 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               
-              {/* FIXED: Unescaped quotes replaced with &quot; */}
               <p className="text-gray-700 leading-relaxed text-sm flex-1">
                 &quot;{t.text}&quot;
               </p>
