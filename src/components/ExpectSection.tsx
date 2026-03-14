@@ -1,15 +1,16 @@
+// src/components/ExpectSection.tsx
 import { motion } from "framer-motion";
-import { Coffee, ShieldPlus, HeartPulse, Stethoscope } from "lucide-react";
+import { ClipboardList, Activity, HeartPulse, CheckCircle } from "lucide-react";
 
 const steps = [
   {
-    icon: Coffee,
+    icon: ClipboardList,
     num: "01",
     title: "Preparation & Medications",
     desc: "Please eat a full breakfast or lunch prior to your procedure. Taking 400mg of Ibuprofen 1 hour before can help reduce inflammation. Continue all regular medications unless advised otherwise.",
   },
   {
-    icon: ShieldPlus,
+    icon: Activity,
     num: "02",
     title: "The Procedure",
     desc: "Root canals are performed using local anesthesia. Because you'll be comfortable and awake, there are typically no restrictions after the procedure concerning driving or returning to work.",
@@ -21,7 +22,7 @@ const steps = [
     desc: "While anaesthetized ('frozen'), avoid drinking hot liquids or chewing to prevent biting yourself. You may experience some discomfort or mild swelling for 1-2 weeks as your tooth heals.",
   },
   {
-    icon: Stethoscope,
+    icon: CheckCircle,
     num: "04",
     title: "Post-Operative Care",
     desc: "A temporary restoration will be placed in your tooth. You must return to your regular dentist to have a permanent filling or crown placed. Avoid heavy chewing on the tooth until then.",
@@ -52,7 +53,6 @@ const ExpectSection = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-0">
@@ -72,6 +72,7 @@ const ExpectSection = () => {
                   <div className={`${isEven ? "" : "md:order-2"}`}>
                     <div className={`${isEven ? "md:text-right md:pr-16" : "md:pl-16"}`}>
                       <span className="font-serif text-5xl text-accent/20">{step.num}</span>
+                      {/* FIXED: Using template literals `` instead of standard quotes "" */}
                       <div className={`flex items-center gap-3 mt-2 mb-3 ${isEven ? 'md:justify-end' : ''}`}>
                         <div className="w-10 h-10 rounded-xl bg-sage-light flex items-center justify-center">
                           <step.icon className="w-5 h-5 text-accent" />
@@ -84,7 +85,6 @@ const ExpectSection = () => {
                     </div>
                   </div>
 
-                  {/* Dot on timeline */}
                   <div className={`hidden md:block ${isEven ? "md:order-2" : ""}`}>
                     <div className={`relative ${isEven ? "md:pl-16" : "md:pr-16 md:text-right"}`}>
                       <div
