@@ -10,7 +10,6 @@ const ChatbotWidget = () => {
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to the bottom when new messages arrive
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,18 +21,16 @@ const ChatbotWidget = () => {
   const handleSend = () => {
     if (!inputValue.trim()) return;
 
-    // Add user message to chat
     const newUserMsg = { id: Date.now(), text: inputValue, isBot: false };
     setMessages((prev) => [...prev, newUserMsg]);
     setInputValue("");
 
-    // Simulate Bot response logic
     setTimeout(() => {
-      let botReply = "I'm a simple assistant. To speak with our team, please call (289) 891-6333.";
+      let botReply = "I am a simple assistant. To speak with our team, please call (289) 891-6333.";
       const lowerInput = newUserMsg.text.toLowerCase();
       
       if (lowerInput.includes("appointment") || lowerInput.includes("book") || lowerInput.includes("schedule")) {
-        botReply = "To schedule an appointment, you can call us directly at (289) 891-6333 or use the 'Request an Appointment' button on our homepage. We'd be happy to see you!";
+        botReply = "To schedule an appointment, you can call us directly at (289) 891-6333 or use the Request an Appointment button on our homepage. We would be happy to see you!";
       } else if (lowerInput.includes("hours") || lowerInput.includes("open")) {
         botReply = "Our hours vary, but you can always leave us a message or request an appointment online and we will get back to you promptly!";
       } else if (lowerInput.includes("pain") || lowerInput.includes("emergency")) {
@@ -55,7 +52,6 @@ const ChatbotWidget = () => {
             transition={{ duration: 0.2 }}
             className="bg-white w-[320px] sm:w-[350px] h-[450px] rounded-2xl shadow-[0_5px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 mb-4 flex flex-col overflow-hidden"
           >
-            {/* Header */}
             <div className="bg-[#2D3A3A] text-white p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -74,7 +70,6 @@ const ChatbotWidget = () => {
               </button>
             </div>
 
-            {/* Messages Area */}
             <div className="flex-1 overflow-y-auto p-4 bg-gray-50 flex flex-col gap-3">
               {messages.map((msg) => (
                 <div 
@@ -91,7 +86,6 @@ const ChatbotWidget = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input Area */}
             <div className="p-3 bg-white border-t border-gray-100 flex gap-2 items-center">
               <input 
                 type="text"
@@ -112,7 +106,6 @@ const ChatbotWidget = () => {
         )}
       </AnimatePresence>
 
-      {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 rounded-full bg-[#B09E80] text-white shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-200"
